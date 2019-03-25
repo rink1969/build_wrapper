@@ -41,6 +41,7 @@ pub fn main() {
     use std::env;
 
     let mut orig_args: Vec<String> = env::args().collect();
+    // eprintln!("orig_args : {:?}", orig_args);
 
     // Setting RUSTC_WRAPPER causes Cargo to pass 'rustc' as the first argument.
     // We're invoking the compiler programmatically, so we ignore this/
@@ -117,6 +118,7 @@ pub fn main() {
 
     // remove wrapper it self
     args.remove(0);
+    // eprintln!("args : {:?}", args);
 
     let exit_status = std::process::Command::new("rustc")
         .args(&args)

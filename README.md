@@ -21,7 +21,7 @@ RUSTC_WRAPPER=/path/to/build_wraper cargo build --release
 1. Some code from [Clippy](https://github.com/rust-lang/rust-clippy).
 2. Cargo got some info from the output of rustc.
 As a rustc wrapper, we must process sysroot.
-We can't add extra output, So it's very difficult to debug.
+We can't add extra std output, we can add stderr ouput by `eprintln!` for debug.
 
 ### Plan
 Now the build wrapper is for [cita](https://github.com/cryptape/cita).
